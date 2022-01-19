@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoIOS.Views.RegistrarseViews"
+             >
+
+    
+            
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+           
+            <StackLayout Padding="0" Margin="10,0,10,0" HorizontalOptions="FillAndExpand"
+                         >
+                <Frame HeightRequest="176" BackgroundColor="White" Padding="0" Margin="0">
+
+                    <Image Source="icon_titulo.png"
+                           WidthRequest="100"
+                           HeightRequest="100"/>
+
+                </Frame>
+                <Label Text=" REGISTRATE"
+                       HorizontalOptions="CenterAndExpand" FontSize="25"
+                       Margin="0,8,0,10"
+                       TextColor="Black"
+                       FontAttributes="Italic"/>
+            </StackLayout>
+            <Frame  BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="0,10,0,0">
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                        <Image Source="https://e7.pngegg.com/pngimages/6/880/png-clipart-web-development-login-business-web-design-user-business-face-web-design.png" Aspect="AspectFill" Margin="0"/>
+                    </Frame>
+
+                    <Entry Placeholder="Nombre" TextColor="#e4f5f2" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"
+                                           x:Name="txtNombre" />
+
+                </StackLayout>
+            </Frame>
+
+            <Frame  BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="0,10,0,0">
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                        <Image Source="https://e7.pngegg.com/pngimages/6/880/png-clipart-web-development-login-business-web-design-user-business-face-web-design.png" Aspect="AspectFill" Margin="0"/>
+                    </Frame>
+
+                    <Entry Placeholder="Apellido" TextColor="#e4f5f2" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"
+                                           x:Name="txtApellido" />
+
+                
+                </StackLayout>
+                
+                
+            </Frame>
+
+            <Frame  BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="0,10,0,0">
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                        <Image Source="https://img2.freepng.es/20180518/ih/kisspng-telephone-iphone-computer-icons-phone-icon-5afebb344d0db4.0041878915266435083156.jpg" Aspect="AspectFill" Margin="0"/>
+                    </Frame>
+
+                    <Entry Placeholder="Telefono" TextColor="#e4f5f2" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"
+                                           x:Name="txtTelefono" />
+
+                </StackLayout>
+            </Frame>
+
+            <Frame  BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="0,10,0,0">
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                        <Image Source="https://www.cnhelios.com/sites/default/files/contacto-mail-icono.png" Aspect="AspectFill" Margin="0"/>
+                    </Frame>
+
+                    <Entry Placeholder="Correo" TextColor="#e4f5f2" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"
+                                           x:Name="txtCorreo" />
+
+                </StackLayout>
+            </Frame>
+
+            <Frame  BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="0,10,0,0">
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                        <Image Source="https://p.kindpng.com/picc/s/394-3942505_password-icon-green-color-hd-png-download.png" Aspect="AspectFill" Margin="0"/>
+                    </Frame>
+
+                    <Entry Placeholder="Contrasena" TextColor="#e4f5f2" IsPassword="True"  FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"
+                                           x:Name="txtContrasena" />
+
+                </StackLayout>
+            </Frame>
+
+            <Button Text="SIGN IN" BackgroundColor="#e4f5f2" TextColor="Black" CornerRadius="30" 
+                                    Margin="0,20,0,20"
+                                    x:Name="btnIngresar"/>
+       
+
+           
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoIOS.Mas"
+             Title="Mas"
+             Icon="masuno.png">
+ 
+    <Grid HorizontalOptions="CenterAndExpand" Padding="10" RowSpacing="20">
+ 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"  />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+             
+        </Grid.ColumnDefinitions>
+        <Label Text="Mas" Grid.Row="0" Margin="0,50,0,10" FontAttributes="Bold" Grid.Column="0" TextColor="Black" FontFamily="Ubuntu" FontSize="Title"/>
+        <Button BackgroundColor="#e4f5f2" Grid.Row="1" Grid.Column="0" ImageSource="perfil.png" Text="Perfil" TextColor="Black" CornerRadius="15" FontFamily="Ubuntu" IsVisible="true" />
+        <Button BackgroundColor="#e4f5f2" x:Name="botonayuda" Clicked="botonayuda_Clicked" Grid.Row="2" Grid.Column="0" ImageSource="ayuda.png" Text="Centro de ayuda" TextColor="Black" CornerRadius="15" FontFamily="Ubuntu" IsVisible="true" />
+        <Button BackgroundColor="#e4f5f2" Grid.Row="3" Grid.Column="0" ImageSource="pagos.png" Text="Metodo de Pago" TextColor="Black"  CornerRadius="15" FontFamily="Ubuntu" IsVisible="true" x:Name="pagos" Clicked="pagos_Clicked" />
+        <Button BackgroundColor="#e4f5f2" Grid.Row="4" Grid.Column="0" ImageSource ="diario.png" Text="Blog" TextColor="Black"  CornerRadius="15" FontFamily="Ubuntu" IsVisible="true" x:Name="botonblog" Clicked="botonblog_Clicked"/>
+        <Button BackgroundColor="#e4f5f2" Grid.Row="5" Grid.Column="0" ImageSource ="terminos.png" Text="Terminos y condiciones" TextColor="Black"  CornerRadius="15" FontFamily="Ubuntu" IsVisible="true" x:Name="terminos" Clicked="terminos_Clicked" />
+        <Image x:Name="logo" Grid.Row="6" Grid.Column="0"
+               Source="restaurantes2.png"/>
+        <Label Text="¿Tienes un negocio ? Unete a Pickup y combate el desperdicio de alimento" Grid.Row="7" Grid.Column="0" TextColor="Black" FontFamily="Ubuntu" HorizontalOptions="CenterAndExpand"/>
+        
+    </Grid>
+</ContentPage>

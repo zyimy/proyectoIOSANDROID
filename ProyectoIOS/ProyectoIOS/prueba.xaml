@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:ProyectoIOS.ViewModels"
+             x:Class="ProyectoIOS.prueba">
+
+    <ContentPage.BindingContext>
+
+        <viewmodels:RegistrosViewModel/>
+
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Restaurantes}"
+                      HasUnevenRows="True"
+                      x:Name="listaRest"
+                      ItemTapped="listaRest_ItemTapped">
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Image Source="{Binding Imagen}"
+                                   WidthRequest="200"
+                                   HeightRequest="200"/>
+                                
+                                <Label Text="{Binding Nombre}"
+                                       FontSize="13" TextColor="DarkOrange"
+                                       HorizontalOptions="FillAndExpand"/>
+
+                                <Label Text="{Binding Descripcion}"
+                                       FontSize="11" TextColor="Green"
+                                     HorizontalOptions="FillAndExpand"
+                                       />
+
+                                <Label Text="{Binding NumeroCalle}"
+                                       FontSize="11" TextColor="Green"
+                                     HorizontalOptions="FillAndExpand"/>
+                                
+                                <Label Text="{Binding Telefono}"
+                                       FontSize="11" TextColor="Green"
+                                     HorizontalOptions="FillAndExpand"/>
+
+                                <Label Text="{Binding NombreCalle}"
+                                       FontSize="11" TextColor="Green"
+                                     HorizontalOptions="FillAndExpand"/>
+
+                                <Label Text="{Binding Horario}"
+                                       FontSize="11" TextColor="Green"
+                                     HorizontalOptions="FillAndExpand"/>
+
+                                <StackLayout>
+                                    <Button Text="Ver pack"
+                                           />
+                                </StackLayout>
+
+
+
+
+
+                            </StackLayout>
+
+                            
+                        </ViewCell>
+
+
+
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

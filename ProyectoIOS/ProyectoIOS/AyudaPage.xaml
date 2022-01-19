@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoIOS.AyudaPage">
+    <StackLayout>
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+            <Label Margin="0,0,0,10" Text="Centro de Ayuda Pickup " FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+            </StackLayout>
+            <StackLayout>
+            <Frame HeightRequest="670" WidthRequest="350" 
+               
+                           BackgroundColor="White" Padding="0"
+                           HasShadow="True" Margin="10" CornerRadius="10"
+                           HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Entry x:Name="txtNombre" Placeholder="Nombre" ></Entry>
+                    <Entry x:Name="txtApellido" Placeholder="Apellido" ></Entry>
+                    <Entry x:Name ="comen" Placeholder="escriba un cometario"></Entry>
+                </StackLayout>
+                 </Frame>
+        </StackLayout>
+        
+        <StackLayout>
+            <Frame HeightRequest="750" WidthRequest="850" 
+               
+                           BackgroundColor="White" Padding="0"
+                           HasShadow="True" Margin="10" CornerRadius="10"
+                           HorizontalOptions="CenterAndExpand">
+
+                <TableView Intent="Settings">
+                    <TableRoot>
+                        <TableSection Title="Solicitud de Ayuda" TextColor="Black" >
+                            <SwitchCell Text="Aplicacion" x:Name="app" OnColor="Green" OnChanged="app_OnChanged" />
+                            <SwitchCell Text="Metodo de Pago" x:Name="pag"  OnColor="Green"/>
+                            <SwitchCell Text="Problema en la Recogida" x:Name="recog" OnColor="Green"  />
+                            <SwitchCell Text="Modificar Datos" x:Name="dat"  OnColor="Green"/>
+                            <SwitchCell Text="Problema de Ubicacion" x:Name="ubi"  OnColor="Green" />
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+                
+              
+            </Frame>
+        </StackLayout>
+    
+    <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+              <Button x:Name="agregarAyuda" Clicked="agregarAyuda_Clicked" TextColor="Black" FontSize="14"  FontFamily="Ubuntu" BackgroundColor="LightSkyBlue" WidthRequest="200" Text="Enviar " CornerRadius="15" />
+                    
+             </StackLayout>
+               
+                <ListView x:Name="lstAyuda">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                   
+                    <TextCell Text="{Binding comentario}" TextColor="Black"></TextCell>
+                    
+               
+                </DataTemplate>
+                  </ListView.ItemTemplate>
+              </ListView>
+            
+      
+    </StackLayout>
+   
+</ContentPage>

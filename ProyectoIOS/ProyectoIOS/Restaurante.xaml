@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoIOS.Restaurante"
+             Title="Restaurantes"
+             Icon="restaurantes2.png">
+    <ContentView>
+        <ScrollView>
+            <StackLayout Margin="50" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <ListView x:Name="lstRestaurante" SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+
+                            <Frame HasShadow="true"  Margin="10" CornerRadius="10"
+                                    BackgroundColor="White" Padding="0">
+                                <StackLayout>
+                                    <StackLayout  BackgroundColor="Black">
+                                        <Image Source="{Binding imgSource}" 
+                                    HeightRequest="200" Opacity="0.6"
+                                    Aspect="AspectFill"/>
+                                    </StackLayout>
+                                    <Image Source="perfil.png"/>
+                                    <Label Text="{Binding nombre}"></Label>
+                                    <Image Source="direccion.png"/>
+                                    <Label Text="{Binding calle}"></Label>
+                                    <Image Source="diario.png"/>
+                                    <Label  Text="{Binding descripcion}"></Label>
+                                    <Image Source="horario.png"/>
+                                    <Label Text="{Binding hoario}"></Label>
+                                    <Image Source="phone.png"/>
+                                    <Label Text="{Binding telefono}"></Label>
+                                    <ImageButton
+                                        Margin="6"
+                                        Padding="10"
+                                        HeightRequest="50"
+                                        HorizontalOptions="Center"
+                                        InputTransparent="True"
+                                        Source="favotiro3.png"
+                                        VerticalOptions="Center"
+                                        WidthRequest="30" />
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentView>
+</ContentPage>

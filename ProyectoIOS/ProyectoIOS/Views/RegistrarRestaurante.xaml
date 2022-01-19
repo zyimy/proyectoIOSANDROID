@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoIOS.Views.RegistrarRestaurante">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="txtNombre"
+                   Placeholder="Nombre"/>
+            <Entry x:Name="txtNombrCalle"
+                   Placeholder="Nombre calle"/>
+            <Entry x:Name="txtNumeroCalle"
+                   Placeholder="Numero Calle"/>
+            <Entry x:Name="txtHorario"
+                   Placeholder="Horario"/>
+            <Entry x:Name="txtTelefono"
+                   Placeholder="Telefono"/>
+            <Entry x:Name="txtDescripcion"
+                   Placeholder="Descripcion"/>
+            <Entry x:Name="txtImagen"
+                   Placeholder="Url de Imagen"/>
+
+            <Button x:Name="btnIngresar"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

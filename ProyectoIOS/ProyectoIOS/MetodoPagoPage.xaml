@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:fastEntry="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors" 
+             xmlns:local="clr-namespace:ProyectoIOS"
+             x:Class="ProyectoIOS.MetodoPagoPage">
+    <Page.Resources>
+        <ResourceDictionary>
+            <local:CardNumberToImageConverter x:Key="CardConverter"
+                   Amex="amex.png" Dinners="dinners.png" Discover="discover.png" JCB="jcb.png"
+                                              MasterCard="mastercard.png" Visa="visa.jpg"
+                                              NotRecognized="nocard.png"/>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Padding="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Informacion de la tarjeta" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+               FontSize="Large"/>
+        <Label Text="Credito/Debito" FontSize="Medium"
+               Grid.Row="1" Grid.Column="0"/>
+
+        <Label Text="Number" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"/>
+        <Entry Text="{Binding CardNumber, Mode=TwoWay}" Keyboard="Numeric"
+               Placeholder="Enter your card number" Grid.Row="3" Grid.Column="0">
+            <Entry.Behaviors>
+                <fastEntry:XamarinFastEntryBehaviour Mask="#### #### #### ####" 
+                                                     MaxLength="19" />
+            </Entry.Behaviors>
+        </Entry>
+        <Image Grid.Row="3" Grid.Column="1" Source="{Binding CardNumber,Converter={StaticResource CardConverter}}"/>
+
+        <Label Text="Expire at" Grid.Row="4" Grid.Column="0" VerticalOptions="Center"/>
+        <Entry Text="{Binding Expiration, Mode=TwoWay}" Keyboard="Numeric"
+               Placeholder="MM/YY  " Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
+            <Entry.Behaviors>
+                <fastEntry:XamarinFastEntryBehaviour Mask="##/##" 
+                                                     MaxLength="19"/>
+            </Entry.Behaviors>
+        </Entry>
+
+        <Label Text="CVC" Grid.Row="6" Grid.Column="0" VerticalOptions="Center"/>
+        <Entry Text="{Binding CVC, Mode=TwoWay}"
+               Keyboard="Numeric"
+               Placeholder="" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2">
+            <Entry.Behaviors>
+                <fastEntry:XamarinFastEntryBehaviour Mask="###" 
+                                                     MaxLength="3"/>
+            </Entry.Behaviors>
+        </Entry>
+
+        <Button Text="Realizar el Pago" Grid.Row="8"   Grid.ColumnSpan="4"  CornerRadius="25" 
+                TextColor="White" BackgroundColor="#00AE0C" x:Name="tarjeta" Clicked="tarjeta_Clicked"/>
+
+    </Grid>
+</ContentPage>

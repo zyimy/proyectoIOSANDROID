@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ProyectoIOS"
+             x:Class="ProyectoIOS.BlogPage">
+    <ContentPage.BindingContext>
+        <vm:BlogViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        
+          
+            <StackLayout>
+                <Label  Text="Blog" TextColor="Black" FontSize="24" FontAttributes="Bold" Margin="15"/>
+            </StackLayout>
+            <StackLayout>
+                <Label  Text="BLOG DE PICKUP"  TextDecorations="Underline" TextColor="Black" FontSize="30" FontAttributes="Bold" Margin="15" FontFamily="Ubuntu" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <StackLayout>
+                <Label  Text="TE CONTAMOS LAS ULTIMAS NOVEDADES DE PICKUP, DAMOS CONSEJOS DE COMO REDUCIR AL MAXIMO EL DESPERDICIO DE ALIMENTOS" HorizontalOptions="Center" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="15" FontFamily="Ubuntu"/>
+            </StackLayout>
+       
+             
+            <CarouselView ItemsSource="{Binding blog}" HeightRequest="300"  WidthRequest="400" VerticalOptions="CenterAndExpand">
+
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                   
+                    <StackLayout>
+                        <Frame HeightRequest="500" WidthRequest="500" 
+               
+                           BackgroundColor="White" Padding="0"
+                           HasShadow="True" Margin="10" CornerRadius="10"
+                           HorizontalOptions="CenterAndExpand">
+                            <Grid>
+                                <StackLayout  BackgroundColor="Black">
+                                    <Image Source="{Binding imgSource}" 
+                                    HeightRequest="200" Opacity="0.6"
+                                    Aspect="AspectFill"/>
+                                </StackLayout>
+                                <StackLayout Margin="0,0,0,10">
+
+                                
+                                    <Label Text="{Binding title}" TextColor="White" FontSize="18"
+                           FontAttributes="None" Margin="15,0"
+                           VerticalOptions="EndAndExpand"/>
+
+                                    <StackLayout Orientation="Horizontal"  Margin="15,-8,0,0">
+                                       
+                                        <Label Text="{Binding nombre}" TextColor="White" FontSize="14"
+                           FontAttributes="None" 
+                           VerticalOptions="EndAndExpand"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+
+
+
+                        </Frame>
+                    </StackLayout>
+                  
+                </DataTemplate>
+                </CarouselView.ItemTemplate>
+        </CarouselView>
+       
+        
+        </StackLayout>
+</ContentPage>
